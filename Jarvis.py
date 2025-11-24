@@ -11,18 +11,24 @@ import requests
 from PyDictionary import PyDictionary
 
 # Initialization
+
+
+
 engine = pyttsx3.init()
 recognizer = sr.Recognizer()
 dictionary = PyDictionary()
 openai.api_key = "YOUR_API_KEY"  # Replace with your real API key
 
-# Speak out text
+
+
 def speak(text):
     print("Assistant:", text)
     engine.say(text)
     engine.runAndWait()
 
 # Wake Word Detection
+
+
 def wait_for_wake_word():
     speak("Say 'Hey Jarvis' to activate me.")
     while True:
@@ -52,7 +58,9 @@ def take_command():
         return "Sorry, the service is unavailable"
 
 # Ask ChatGPT
-def ask_gpt(prompt):
+    
+    
+    def ask_gpt(prompt):
     try:
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
@@ -64,9 +72,14 @@ def ask_gpt(prompt):
 
 # Define a word using dictionary
 def define_word(word):
+
+    
     try:
         meaning = dictionary.meaning(word)
         if meaning:
+
+
+            
             for key, value in meaning.items():
                 speak(f"{key}: {value[0]}")
                 print(f"{key}: {value[0]}")
@@ -76,6 +89,9 @@ def define_word(word):
         speak("Something went wrong while fetching the meaning.")
 
 # Chat Mode
+
+
+
 def chat_mode():
     speak("Chat mode activated. Type 'exit' to quit.")
     while True:
@@ -98,7 +114,6 @@ def take_note():
     with open("notes.txt", "a") as file:
         file.write(f"{note}\n")
     speak("Note saved.")
-
 def read_notes():
     try:
         with open("notes.txt", "r") as file:
@@ -106,7 +121,7 @@ def read_notes():
             speak("Here are your notes.")
             speak(notes)
     except:
-        speak("You don't have any notes yet.")
+         speak("You don't have any notes yet.")
 
 # Weather
 
@@ -115,7 +130,7 @@ def get_weather(city="Delhi"):
     url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
     try:
         data = requests.get(url).json()
-        if data.get("main"):
+        if data.get("main" ):
             temp = data["main"]["temp"]
             desc = data["weather"][0]["description"]
             speak(f"The temperature in {city} is {temp} degrees with {desc}")
@@ -126,12 +141,14 @@ def get_weather(city="Delhi"):
 
 # Music
 
+
+
 def play_music():
     music_dir = "C:\\Users\\YourName\\Music"
     try:
         songs = os.listdir(music_dir)
-        os.startfile(os.path.join(music_dir, songs[0]))
-        speak("Playing music.")
+        os.startfile(os.path.join( music_dir, songs[0]))
+        speak("Playing music ")
     except:
         speak("Music folder not found or empty.")
 
@@ -165,7 +182,7 @@ def perform_task(command):
         read_notes()
     elif "weather" in command:
         get_weather()
-    elif "play music" in command:
+    elif "play music"  in command:
         play_music()
     elif "face unlock" in command:
         face_unlock()
@@ -195,9 +212,10 @@ def perform_task(command):
         speak(f"Today is {current_date}")
     elif "who is" in command or "what is" in command:
         try:
-            topic = command.replace("who is", "").replace("what is", "").strip()
+           topic = command.replace("who is", "").replace("what is", "").strip()
+            
             info = wikipedia.summary(topic, sentences=2)
-            speak(info)
+           speak(info)
         except:
             speak("Sorry, I couldn't find that on Wikipedia.")
     elif "define" in command:
@@ -210,15 +228,17 @@ def perform_task(command):
         response = ask_gpt(command)
         speak(response)
 
-# Start assistant
+
 speak("Initializing Jarvis...")
 wait_for_wake_word()
 speak("Hello Maggi, I am your assistant. How can I help you?")
 
-# Main Loop
-while True:
+
+
+while True: 
     cmd = take_command()
     if cmd != "i didn't catch that":
-        perform_task(cmd)
+       perform_task(cmd)
     else:
         speak(cmd)
+
