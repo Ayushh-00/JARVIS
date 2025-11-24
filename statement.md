@@ -2,12 +2,11 @@
 
 This document outlines the purpose and functionality of the JARVIS Voice Assistant project.
 
- 📌 Project Overview
+ Project Overview
 
 The JARVIS Voice Assistant is a Python-based personal assistant designed to perform everyday tasks through voice commands. It focuses on simplicity, reliability, and easy customization for anyone who wants to build and expand their own assistant.
 
----
- 🎯 Objective
+ Objective
 
 The main goal of this project is to create a hands-free assistant capable of:
 
@@ -17,8 +16,8 @@ The main goal of this project is to create a hands-free assistant capable of:
 * Offering conversational support through ChatGPT
 * Providing weather updates and general utilities
 
----
- 🧩 Scope of the Project
+
+Scope of the Project
 
 This assistant currently includes:
 
@@ -36,7 +35,7 @@ The project is modular, so new features can be added at any point.
 
 
 
- 🛠 Motivation
+ Motivation
 
 The idea behind this project was to create a personal, lightweight assistant similar to JARVIS from Iron Man, but practical enough for daily use. It also serves as a great learning project for topics like:
 
@@ -46,8 +45,7 @@ The idea behind this project was to create a personal, lightweight assistant sim
 * AI integration
 * Computer vision basics
 
-
-## 📄 Conclusion
+ Conclusion
 
 The JARVIS Assistant is a growing project meant for both personal use and learning purposes. It provides a solid foundation for anyone interested in building a more advanced AI assistant.
 
