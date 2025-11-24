@@ -1,14 +1,13 @@
-# JARVIS
+JARVIS
 AYUSH KUMAR SINGH PROJECT FOR VITYARTHI
-# JARVIS Voice Assistant
+ JARVIS Voice Assistant
 
 A simple, personal voice assistant built in Python. It responds to your voice commands, answers questions, opens apps, fetches weather, takes notes, and can even chat with you. This project is meant to be lightweight, easy to understand, and fun to modify.
 
----
 
-## 🚀 Features
+Features
 
-* Wake-word activation (say **"Hey Jarvis"**)
+* Wake-word activation (say"Hey Jarvis")
 * Text‑to‑speech using `pyttsx3`
 * Speech recognition using Google’s API
 * Chat responses via OpenAI
@@ -20,13 +19,11 @@ A simple, personal voice assistant built in Python. It responds to your voice co
 * Basic (dummy) face unlock using OpenCV
 * System controls like shutdown and restart
 
----
-
-## 📦 Installation
+Installation
 
 Install all required Python packages:
 
-```bash
+
 pip install pyttsx3
 pip install SpeechRecognition
 pip install openai
@@ -45,7 +42,7 @@ pipwin install pyaudio
 
 ---
 
-## 🔧 Setup
+ Setup
 
 1. Add your OpenAI API key:
 
@@ -65,9 +62,8 @@ api_key = "YOUR_OPENWEATHER_API_KEY"
 music_dir = "C:\Users\YourName\Music"
 ```
 
----
 
-## ▶️ Running the Assistant
+ Running the Assistant
 
 Run the script normally:
 
@@ -87,49 +83,42 @@ Jarvis will wait for the wake word. After you say **"Hey Jarvis"**, you can give
 
 ---
 
-## 🧠 Chat Mode
+ Chat Mode
 
 Say **"chat mode"** to switch to typing mode.
 Type your message, and type **exit** anytime to go back.
 
----
 
-## 📁 Notes
+
+ Notes
 
 * "take note" → saves your spoken sentence
 * "read notes" → reads everything from *notes.txt*
 
----
 
-## 🌦 Weather
+
+ Weather
 
 Gets real‑time weather using OpenWeatherMap. Default city is **Delhi**, but you can customize it easily.
 
----
-
-## 📸 Face Unlock (Dummy)
+ Face Unlock (Dummy)
 
 Opens the webcam and displays a live feed. This is not actual face recognition—just a placeholder for future improvement.
 
----
-
-## ⚠️ Important
+ Important
 
 * Make sure your microphone works.
 * Internet is required for ChatGPT, weather, and voice recognition.
 * Keep your API keys private.
 
----
 
-## 💡 Future Improvements
+ Future Improvements
 
 * Real face recognition
 * Better wake-word detection
 * Offline speech-to-text
 * Customizable command sets
 
----
-
-## 📝 Author
+ Author
 
 Made by me, with the goal of building a simple and functional personal assistant. Happy coding!
